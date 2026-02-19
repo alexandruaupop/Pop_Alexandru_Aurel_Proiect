@@ -1,0 +1,37 @@
+﻿@page
+@model Pop_Alexandru_Aurel_Proiect.Pages.SubscriptionsType.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>SubscriptionType</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SubscriptionType.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SubscriptionType.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SubscriptionType.DurationInDays)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SubscriptionType.DurationInDays)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SubscriptionType.Price)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SubscriptionType.Price)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.SubscriptionType.SubscriptionTypeId">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

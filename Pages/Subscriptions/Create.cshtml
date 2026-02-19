@@ -1,0 +1,54 @@
+﻿@page
+@model Pop_Alexandru_Aurel_Proiect.Pages.Subscriptions.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Subscription</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <span class="text-danger">*</span>
+                <label asp-for="Subscription.MemberId" class="control-label"></label>
+                <select asp-for="Subscription.MemberId" class ="form-control" asp-items="ViewBag.MemberId" aria-required="true"></select>
+            </div>
+            <div class="form-group">
+                <span class="text-danger">*</span>
+                <label asp-for="Subscription.SubscriptionTypeId" class="control-label"></label>
+                <select asp-for="Subscription.SubscriptionTypeId" class ="form-control" asp-items="ViewBag.SubscriptionTypeId" aria-required="true"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Subscription.StartDate" class="control-label"></label>
+                <input asp-for="Subscription.StartDate" class="form-control" />
+                <span asp-validation-for="Subscription.StartDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Subscription.EndDate" class="control-label"></label>
+                <input asp-for="Subscription.EndDate" class="form-control" />
+                <span asp-validation-for="Subscription.EndDate" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Subscription.IsActive" /> @Html.DisplayNameFor(model => model.Subscription.IsActive)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

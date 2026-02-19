@@ -1,0 +1,60 @@
+﻿@page
+@model Pop_Alexandru_Aurel_Proiect.Pages.Subscriptions.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Subscription[0].Member)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Subscription[0].SubscriptionType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Subscription[0].StartDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Subscription[0].EndDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Subscription[0].IsActive)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Subscription) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Member.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SubscriptionType.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EndDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsActive)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.SubscriptionId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.SubscriptionId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.SubscriptionId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
