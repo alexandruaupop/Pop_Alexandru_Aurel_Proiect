@@ -5,31 +5,31 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Lista de membri</h1>
 
 <p>
-    <a asp-page="Create">Create New</a>
+    <a asp-page="Create">Creează un membru nou</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Member[0].FirstName)
+                Prenume
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Member[0].LastName)
+                Nume
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Member[0].Email)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Member[0].Phone)
+                Telefon
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Member[0].JoinDate)
+                Data de înregistrare
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Member[0].Trainer)
+                Antrenor
             </th>
             <th></th>
         </tr>
@@ -56,9 +56,9 @@
                 @Html.DisplayFor(modelItem => item.Trainer.FirstName)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.MemberId">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.MemberId">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.MemberId">Delete</a>
+                <a asp-page="./Edit" asp-route-id="@item.MemberId">Editează</a> |
+                <a asp-page="./Details" asp-route-id="@item.MemberId">Detalii</a> |
+                <a asp-page="./Delete" asp-route-id="@item.MemberId">Ștergere</a>
             </td>
         </tr>
 }

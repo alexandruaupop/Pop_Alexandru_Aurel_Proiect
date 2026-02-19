@@ -5,28 +5,28 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Listă abonamente</h1>
 
 <p>
-    <a asp-page="Create">Create New</a>
+    <a asp-page="Create">Creează un nou abonament</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Subscription[0].Member)
+                Membru
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Subscription[0].SubscriptionType)
+                Tip de abonament
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Subscription[0].StartDate)
+                Dată de început
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Subscription[0].EndDate)
+                Dată de sfârșit
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Subscription[0].IsActive)
+                Activ
             </th>
             <th></th>
         </tr>
@@ -50,9 +50,9 @@
                 @Html.DisplayFor(modelItem => item.IsActive)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.SubscriptionId">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.SubscriptionId">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.SubscriptionId">Delete</a>
+                <a asp-page="./Edit" asp-route-id="@item.SubscriptionId">Editează</a> |
+                <a asp-page="./Details" asp-route-id="@item.SubscriptionId">Detalii</a> |
+                <a asp-page="./Delete" asp-route-id="@item.SubscriptionId">Șterge</a>
             </td>
         </tr>
 }

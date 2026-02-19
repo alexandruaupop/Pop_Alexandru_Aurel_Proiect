@@ -5,32 +5,32 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
+<h1>Detalii</h1>
 
 <div>
-    <h4>Trainer</h4>
+    <h4>Antrenori</h4>
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Trainer.FirstName)
+            Prenume
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Trainer.FirstName)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Trainer.LastName)
+            Nume
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Trainer.LastName)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Trainer.Specialization)
+            Specializare
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Trainer.Specialization)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Trainer.Phone)
+            Telefon
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Trainer.Phone)
@@ -38,6 +38,6 @@
     </dl>
 </div>
 <div>
-    <a asp-page="./Edit" asp-route-id="@Model.Trainer.TrainerId">Edit</a> |
-    <a asp-page="./Index">Back to List</a>
+    <a asp-page="./Edit" asp-route-id="@Model.Trainer.TrainerId">Editează</a> |
+    <a asp-page="./Index">Înapoi la listă</a>
 </div>

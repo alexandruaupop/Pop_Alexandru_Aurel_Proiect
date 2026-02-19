@@ -5,9 +5,9 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+<h1>Creează</h1>
 
-<h4>Subscription</h4>
+<h4>Abonament</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -15,38 +15,38 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <span class="text-danger">*</span>
-                <label asp-for="Subscription.MemberId" class="control-label"></label>
+                <label asp-for="Subscription.MemberId" class="control-label">Membru</label>
                 <select asp-for="Subscription.MemberId" class ="form-control" asp-items="ViewBag.MemberId" aria-required="true"></select>
             </div>
             <div class="form-group">
                 <span class="text-danger">*</span>
-                <label asp-for="Subscription.SubscriptionTypeId" class="control-label"></label>
+                <label asp-for="Subscription.SubscriptionTypeId" class="control-label">Tip de abonament</label>
                 <select asp-for="Subscription.SubscriptionTypeId" class ="form-control" asp-items="ViewBag.SubscriptionTypeId" aria-required="true"></select>
             </div>
             <div class="form-group">
-                <label asp-for="Subscription.StartDate" class="control-label"></label>
+                <label asp-for="Subscription.StartDate" class="control-label">Data de începere</label>
                 <input asp-for="Subscription.StartDate" class="form-control" />
                 <span asp-validation-for="Subscription.StartDate" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Subscription.EndDate" class="control-label"></label>
+                <label asp-for="Subscription.EndDate" class="control-label">Data de final</label>
                 <input asp-for="Subscription.EndDate" class="form-control" />
                 <span asp-validation-for="Subscription.EndDate" class="text-danger"></span>
             </div>
             <div class="form-group form-check">
                 <label class="form-check-label">
-                    <input class="form-check-input" asp-for="Subscription.IsActive" /> @Html.DisplayNameFor(model => model.Subscription.IsActive)
+                    <input class="form-check-input" asp-for="Subscription.IsActive" /> Este activ
                 </label>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Creează" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-page="Index">Back to List</a>
+    <a asp-page="Index">Înapoi la listă</a>
 </div>
 
 @section Scripts {
